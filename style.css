@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    width: 100%;
+    height: 100%;}
+
+section{background: linear-gradient(to right,rgb(53, 6, 6),yellow);
+    padding: 100px;
+    height: 100vh;
+    width: 100vw;
+}
+section h2{
+    font-size: 4em;
+    color: white;
+}
+section h2 span{
+    display: block;
+    font-size: 0.5em;
+    color: pink;
+}
+section p{
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.container{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid black;
+    
+    width: 100%;
+    height: 100vh;
+    z-index: 1000000;
+    background: linear-gradient(to left,black, rgb(150, 131, 23));
+}
+.container.active{
+    transform: translateY(-100vh);
+    transition: ease-out 2s;
+}
+.counter{
+    position: relative;
+    color: white;
+    font-size: 16em;
+    font-weight: 700;
+    z-index: 1;
+}
+.counter::after{
+    content: "%";
+    font-size: 0.8em;
+
+}
